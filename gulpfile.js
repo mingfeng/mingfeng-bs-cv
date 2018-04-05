@@ -27,17 +27,16 @@ gulp.task('vendor', function() {
     ])
     .pipe(gulp.dest('./vendor/bootstrap'))
 
-  // Devicons
+  // Devicon
   gulp.src([
-      './node_modules/devicons/**/*',
-      '!./node_modules/devicons/*.json',
-      '!./node_modules/devicons/*.md',
-      '!./node_modules/devicons/!PNG',
-      '!./node_modules/devicons/!PNG/**/*',
-      '!./node_modules/devicons/!SVG',
-      '!./node_modules/devicons/!SVG/**/*'
+      './node_modules/devicon-2.2/fonts/**',
     ])
-    .pipe(gulp.dest('./vendor/devicons'))
+    .pipe(gulp.dest('./vendor/devicon/fonts'))
+
+  gulp.src([
+      './node_modules/devicon-2.2/*.css'
+    ])
+    .pipe(gulp.dest('./vendor/devicon'))
 
   // Font Awesome
   gulp.src([
